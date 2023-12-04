@@ -1,0 +1,12 @@
+version: 'latest'
+services:
+  node:
+    build: .
+    container_name: backend
+    tty: true
+    stdin_open: true
+    command: sh
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/backend
